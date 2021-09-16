@@ -1,0 +1,714 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Work+Sans:ital,wght@0,700;1,600&display=swap');
+
+/*font-family: 'Inter', sans-serif;*/
+/*font-family: 'Work Sans', sans-serif;*/
+
+html, body {
+    font-family: 'Inter', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Work Sans', sans-serif !important;
+    margin: 0 !important;
+}
+
+
+/*Main Style*/
+.App {
+    background: url('./assets/img/body_bg.png') center center/cover no-repeat;
+    min-height: 100vh;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    color: #040D27;
+}
+
+.title--primary {
+    font-size: 18px;
+    line-height: 126%;
+    letter-spacing: 0.03em;
+    margin: 31px 10px 27px;
+}
+
+/*Buttons*/
+.btnBrand {
+    box-shadow: inset 0 2px 2px rgba(104, 164, 255, 0.25);
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 126%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    width: 234px;
+    height: 56px;
+    color: #FFFFFF;
+    border: 2px solid transparent;
+    outline: none;
+    transition: 300ms ease-in-out background-color, border, color;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.btnBrand--primary {
+    background-color: #040D27;
+}
+
+.btnBrand--primary:hover {
+    background-color: #fff;
+    border: 2px solid #040D27;
+    color: #040D27;
+}
+
+/*Drop Down*/
+.ui.fluid.dropdown {
+    margin-top: 0.6875rem;
+    box-shadow: 0 2px 14px rgba(34, 23, 79, 0.15) !important;
+    background: #FFFFFF!important;
+    border-radius: 10px!important;
+    padding: 1rem!important;
+    min-width: 284px!important;
+    width: 100%;
+    cursor: pointer!important;
+    border: none!important;
+    height: 64px;
+    display: flex!important;
+    align-items: center;
+    font-weight: 500!important;
+    font-size: 1.125rem!important;
+    line-height: 126% !important;
+    letter-spacing: 0.03em!important;
+    color: #040D27!important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.amountSelectItem .ui.fluid.dropdown {
+    height: 87px!important;
+}
+
+.amountSelectItem .ui.fluid.dropdown:after {
+    top: 32px;
+}
+
+.dropdown.icon {
+    display: none;
+}
+
+.ui.fluid.dropdown:after {
+    position: absolute;
+    content: url("./assets/images/downArrow.svg");
+    top: 20px;
+    right: 8px;
+}
+
+.visible.menu {
+    border: none!important;
+    margin-top: 0.25rem!important;
+    box-shadow: 0 2px 14px rgba(34, 23, 79, 0.15) !important;
+    background: #FFFFFF!important;
+    border-radius: 10px!important;
+}
+
+.ui.dropdown>.text, .visible.menu .item {
+    display: flex!important;
+    align-items: center!important;
+}
+
+/*Modify Bootstrap*/
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1280px !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 736px!important;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .btnBrand {
+        width: 100% !important;
+    }
+}
+
+
+/*CSS M - 9-16 Start */
+
+.App> .container {
+    display: none;
+}
+
+header.navHeader nav.navbar {
+    display: contents;
+}
+
+.navContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1424px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.navRight {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.navContainer .navbar-brand {
+    padding: 0;
+    margin: 0 40px 0 0;
+}
+
+.navTabs {
+    display: flex;
+    align-items: center;
+    border: 1px solid #D2D4E8;
+    border-radius: 9px;
+    padding: 2px;
+}
+
+.navTabs a.navTab {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #787e8ae6;
+    padding: 0 10px;
+    border-radius: 8px;
+    margin-right: 2px;
+}
+
+.navTabs a.navTab.active, .navTabs a.navTab:hover {
+    background: #E3E9FF;
+    color: rgb(40 83 235 / 90%);
+}
+
+.navTabs .navTab:last-child {
+    margin: 0;
+}
+
+header.navHeader {
+    background: #fff;
+    padding: 13px 0 7px;
+}
+
+span.menu_btn {
+    display: block;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.logOut {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: #000000e6;
+    display: flex;
+    align-items: center;
+}
+
+.logOut img {
+    display: block;
+    margin-left: 8px;
+}
+
+.contai_leftside_col, .main_conent_col {
+    padding: 0 12px;
+}
+
+.main_container .row {
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+.main_container> .row {
+    flex-wrap: nowrap;
+}
+
+.main_container .row> div {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.main_container {
+    max-width: 1432px;
+    padding: 15px 16px;
+    margin: 0 auto;
+}
+
+.contai_leftside {
+    box-shadow: 0px 4px 17px rgba(156, 156, 177, 0.15);
+    border-radius: 16px;
+    background: #fff;
+    padding: 17px 16px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.leftSideSelect select {
+    display: block;
+    width: 100%;
+    height: 40px;
+    top: 92px;
+    border: 1px solid #D2D4E8;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+    letter-spacing: 0.03em;
+    color: rgb(4 13 39 / 90%);
+    order: 0;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #fff;
+}
+
+.contai_leftside_col {
+    width: 19.151%;
+    min-width: 260px;
+}
+
+.sendRecBtns {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.sendReceBtn {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 25px 0 9.5px;
+    font-size: 14px;
+    line-height: 126%;
+    letter-spacing: 0.03em;
+    color: rgb(0 0 0 / 90%);
+    background: #F4F4F8;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.buttonSend {
+    margin-right: 8px;
+}
+
+.sendReceBtn img {
+    margin-right: 12px;
+}
+
+.sidebarMenuList {
+    padding-top: 14px;
+    border-top: 1px solid rgb(190 189 204 / 30%);
+    padding-bottom: 6px;
+}
+
+.sidebarMenuList p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 126%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #8C919C;
+    margin-bottom: 10px;
+}
+
+.sideMenuList li.dash_menu_item a {
+    height: 52px;
+    padding: 0 14px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #000000;
+    flex: none;
+    border-radius: 10px;
+}
+
+.sideMenuList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sideMenuList li a img {
+    margin-right: 14px;
+    width: 24px;
+}
+
+.sideMenuList li.dash_menu_item.active a, 
+.sideMenuList li.dash_menu_item a:hover {
+    background: #F4F4F8;
+}
+
+.sideMenuList li.dash_menu_item.active a img, 
+.sideMenuList li.dash_menu_item a:hover img {
+    filter: invert(1) brightness(0);
+}
+
+ul.sideMenuList li {
+    margin-bottom: 2px;
+}
+
+.xp_netWork21 {
+    padding-left: 14px;
+    margin-top: auto;
+}
+
+.xp21 {
+    height: 46px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 126%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.main_conent_col {
+    flex-grow: 1;
+    width: 80%;
+}
+
+.tokkenid_list {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 17px rgba(156, 156, 177, 0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px 8px 18px;
+}
+
+.tokkenid_list p {
+    margin: 0;
+}
+
+.tokken_icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.tokken_icons .scan_tokken {
+    margin-left: 12px;
+}
+
+.tokken_id {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 15px;
+    white-space: nowrap;
+}
+
+.tokken_list_box {
+    padding-top: 27px;
+}
+
+.tokken_list_title {
+    display: flex;
+    align-items: center;
+}
+
+.secTitle {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 126%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.tokken_list_title p {
+    margin: 0;
+    margin-left: 40px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 126%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #787E8A;
+}
+
+.tokken_list_title p span {
+    color: #000000;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.tokken_boxes {padding-top: 13px;}
+
+.tokken_boxes .row> div {
+    padding: 0 12px;
+}
+
+.singleTokkenBox {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 17px rgba(156, 156, 177, 0.15);
+    border-radius: 16px;
+    padding: 25px 22px;
+}
+
+.tokBoxTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.singleTokkenBox p {
+    margin: 0;
+}
+
+.tokken_logo img {
+    display: block;
+    margin-right: 10px;
+}
+
+.tokken_logo {
+    display: flex;
+    align-items: center;
+}
+
+.tokBoxPri p {
+    font-weight: normal;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #000000;
+    line-height: 20px;
+    margin-bottom: 3px;
+}
+
+.tokBoxPri {margin-bottom: -7px;}
+
+.tranding_persent {
+    text-align: right;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 126%;
+    letter-spacing: 0.03em;
+    color: #01BD85;
+}
+
+.tranding_persent img {
+    margin-right: 4px;
+}
+
+.singleTokkenBox h4 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 126%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #000000;
+    margin-top: 30px !important;
+    margin-bottom: 8px !important;
+}
+
+.nfs_title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 17px;
+}
+
+.nfs_title .secTitle {
+    padding-right: 30px;
+}
+
+.nfsTrans_boxes {
+    padding-top: 15px;
+}
+
+.nfs_boxes_container {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 17px rgba(156, 156, 177, 0.15);
+    border-radius: 16px;
+    padding: 25px 23px 25px 23px;
+    max-height: 488px;
+    overflow: hidden;
+}
+
+.nfs_image img {
+    display: block;
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+.nfs_image {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+.singNFSBox {
+    margin-bottom: 27px;
+}
+
+.view_all {
+    font-size: 14px;
+    line-height: 126%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 4px;
+}
+
+.view_all img {
+    margin-left: 10px;
+}
+
+.transa_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.transa_filter {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.transa_title .secTitle {
+    padding-right: 30px;
+}
+
+.filterTrans {
+    margin-right: 15px;
+}
+
+.trans_boxes_container {
+    padding: 16px 0;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.trans_table_box table.table {
+    margin: 0;
+}
+
+.trans_table_box table.table tr td {
+    height: 64px;
+    vertical-align: middle;
+    border: 0;
+}
+
+.tranTokenNam {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 126%;
+/* or 18px */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+.trans_table_box table.table tr td.tranTokenNam {
+    padding-left: 25px;
+}
+
+span.nfts_logo img {
+    display: block;
+    width: 36px;
+}
+
+span.nfts_logo {
+    margin-left: -15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.sendCol {
+    display: block;
+}
+
+.trans_table_box table.table tr td:first-child {
+    padding-left: 16px;
+    max-width: 50px;
+    min-width: 65px;
+}
+
+.tranSenRecdId {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 126%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #000;
+    line-height: 16px;
+    position: relative;
+    padding-right: 30px;
+    display: inline-block;
+}
+
+.tranDate {
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 126%;
+/* or 15px */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #494D57;
+}
+
+.copy_tra_id {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    width: 36px;
+    height: 30px;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: linear-gradient(to left, #fff, #ffffff, #ffffff08);
+    cursor: pointer;
+    top: 0;
+}
+
+.copy_tra_id img {
+    opacity: 0;
+}
+
+.trans_table_box table.table tr:hover .copy_tra_id img {
+    opacity: 1;
+}
+
+.trans_table_box table.table tr {
+    border-bottom: 1px solid rgb(210 212 232 / 50%);
+}
+
+.trans_table_box table.table tr:last-child {
+    border: 0;
+}
