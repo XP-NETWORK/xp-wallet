@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5 {
     margin: 0 !important;
 }
 
+a, a:hover, a:focus {
+    text-decoration: none !important;
+}
+
 
 /*Main Style*/
 .App {
@@ -256,6 +260,7 @@ span.menu_btn {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+	 min-width: 245px;
 }
 
 .leftSideSelect select {
@@ -340,6 +345,10 @@ span.menu_btn {
     border-radius: 10px;
 }
 
+.sideMenuList li.dash_menu_item a:hover {
+    text-decoration: none;
+}
+
 .sideMenuList {
     list-style: none;
     margin: 0;
@@ -393,10 +402,21 @@ ul.sideMenuList li {
     display: flex;
     align-items: center;
     padding: 8px 12px 8px 18px;
+    position: relative;
 }
 
 .tokkenid_list p {
     margin: 0;
+}
+
+.copyAlert {
+    position: absolute;
+    z-index: 1;
+    top: -21px;
+    left: 15px;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
 }
 
 .tokken_icons {
@@ -544,8 +564,7 @@ ul.sideMenuList li {
     background: #FFFFFF;
     box-shadow: 0px 4px 17px rgba(156, 156, 177, 0.15);
     border-radius: 16px;
-    padding: 25px 23px 25px 23px;
-    max-height: 488px;
+    padding: 25px 23px 0px 23px;
     overflow: hidden;
 }
 
@@ -711,4 +730,24 @@ span.nfts_logo {
 
 .trans_table_box table.table tr:last-child {
     border: 0;
+}
+
+.comiSoonL {
+    display: inline-block;
+    font-size: 10px!important;
+    line-height: 116%;
+    letter-spacing: .01em;
+    padding: 3px 6px;
+    border-radius: 5px;
+    background: rgba(243,60,126,.1)!important;
+    color: #f41e6b!important;
+    font-weight: 500!important;
+}
+
+.navTabs a.navTab .comiSoonL {
+    margin-left: 5px;
+}
+
+.sideMenuList li.dash_menu_item a .comiSoonL {
+    margin-left: auto;
 }

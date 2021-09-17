@@ -15,9 +15,9 @@ const NavBar = () => {
                     <Image src={Logo} fluid/>
                 </Link>
                 <div className="navTabs">
-                    <Link to="#" className="navTab active" id="navTab_1">Testnet</Link>    
-                    <Link to="#" className="navTab" id="navTab_2">Devnet</Link>    
-                    <Link to="#" className="navTab" id="navTab_3">Mainnet</Link>    
+                    <Link to="#" className="navTab active" id="navTab_1">Testnet <span className="comiSoonL">Coming Soon</span></Link>    
+                    <Link to="#" className="navTab" id="navTab_2">Devnet <span className="comiSoonL">Coming Soon</span></Link>    
+                    <Link to="#" className="navTab" id="navTab_3">Mainnet <span className="comiSoonL">Coming Soon</span></Link>    
                 </div>
                 <div class="navRight">
                     <span class="menu_btn"><Image src={menuBtn} fluid/></span>

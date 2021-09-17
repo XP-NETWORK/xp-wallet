@@ -206,9 +206,9 @@ const Volletdashboard = () => {
                             <div className="sidebarMenuList">
                                 <p>Staking</p>
                                 <ul className="sideMenuList">
-                                    <li className="dash_menu_item"><Link to="#"><Image src={Stake} fluid/> Stake</Link></li>
-                                    <li className="dash_menu_item"><Link to="#"><Image src={Delegate} fluid/> Delegate</Link></li>
-                                    <li className="dash_menu_item"><Link to="#"><Image src={Validate} fluid/> Validate</Link></li>
+                                    <li className="dash_menu_item"><Link to="#"><Image src={Stake} fluid/> Stake <span className="comiSoonL">Coming Soon</span></Link></li>
+                                    <li className="dash_menu_item"><Link to="#"><Image src={Delegate} fluid/> Delegate <span className="comiSoonL">Coming Soon</span></Link></li>
+                                    <li className="dash_menu_item"><Link to="#"><Image src={Validate} fluid/> Validate <span className="comiSoonL">Coming Soon</span></Link></li>
                                 </ul>
                             </div>
                             <div className="xp_netWork21">
@@ -219,6 +219,7 @@ const Volletdashboard = () => {
                     <div className="main_conent_col">
                         <div className="main_conent">
                             <div className="tokkenid_list">
+                                <span className="copyAlert">Token ID- Copied</span>
                                 <p className="tokken_id" id="tokkenId">5ENeQkvLvFCg3KjHru6NAwN6esvbUxiS7CP2YicZYjQ4epBb</p>
                                 <div className="tokken_icons">
                                     <Link to="#" className="copy_tokken"><Image src={TokkenCopy} fluid/></Link>
@@ -295,17 +296,12 @@ const Volletdashboard = () => {
 														<tr key={index}>
                                                                 <td><span className="sendCol"><Image src={item.sent_img} fluid/></span></td>
                                                                 <td className="tokkenCol">
-														<p className="tranSenRecdId">Sent to {item.sent_to_txt}
-                                                                        <span className="copy_tra_id"><Image src={copytra} fluid/></span>
-                                                                    </p>
+														            <Link to="#"><p className="tranSenRecdId">Sent to {item.sent_to_txt}</p></Link>
                                                                     <span className="tranDate">{item.date}</span>
                                                                 </td>
                                                                 <td className="tranTokenNam">{item.tranaction_type} 25.20368</td>
                                                             </tr>
 														))}
-                                                            
-															
-                                                            
                                                         </tbody>
                                                     </table>
                                                 </div>
