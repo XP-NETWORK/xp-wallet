@@ -31,19 +31,163 @@ import copytra from "../../assets/img/copy-tra.svg";
 import traSend from "../../assets/img/traSend.svg";
 import traRec from "../../assets/img/traRec.svg";
 import traNfs from "../../assets/img/traNfs.png";
+
+
 const Volletdashboard = () => {
-	return (
-	<main className="mainContainerArea">
+    
+    const Transactions_list = [
+    {
+      sent_img: traRec,
+      sent_to_txt: "sdfghjk56789dfghjk456789",
+      date: "September 1st 2021, at 3:30 PM",
+      tranaction_type: "ETH",
+      tranaction_amount: "25.20368",
+      nonce: 1
+    },
+    {
+      sent_img: traSend,
+      sent_to_txt: "sdfghjk56789dfghjk456789",
+      date: "September 1st 2021, at 3:30 PM",
+      tranaction_type: "ETH",
+      tranaction_amount: "25.20368",
+      nonce: 2
+    },
+    {
+      sent_img: traRec,
+      sent_to_txt: "sdfghjk56789dfghjk456789",
+      date: "September 1st 2021, at 3:30 PM",
+      tranaction_type: "ETH",
+      tranaction_amount: "25.20368",
+      nonce: 3
+    },
+    {
+      sent_img: traSend,
+      sent_to_txt: "sdfghjk56789dfghjk456789",
+      date: "September 1st 2021, at 3:30 PM",
+      tranaction_type: "ETH",
+      tranaction_amount: "25.20368",
+      nonce: 4
+    },
+    {
+      sent_img: traRec,
+      sent_to_txt: "sdfghjk56789dfghjk456789",
+      date: "September 1st 2021, at 3:30 PM",
+      tranaction_type: "ETH",
+      tranaction_amount: "25.20368",
+      nonce: 5
+    },
+  ]
+  
+  const User_list = [
+    {
+      user_name: "Alice Derived",
+	  nonce: 1
+    },
+	{
+      user_name: "Gyaseen Abc",
+	  nonce: 2
+    },
+	{
+      user_name: "Gyaseen Abcd",
+	  nonce: 3
+    },
+	{
+      user_name: "Gyaseen Abcde",
+	  nonce: 4
+    },
+	]
+    const Tokens_list = [
+    {
+      logo_url: xpnet_logo,
+	  logo_text: 'XPNET',
+	  logo_sale: 0.020,
+	  token_precent: 10,
+	  token_list: 15000,
+	  token_short: 'XPNET',
+	  token_amount: 300,
+	  nonce: 1
+    },
+	{
+      logo_url: Etherium_logo,
+	  logo_text: 'Ethereum ETH',
+	  logo_sale: 3938.14,
+	  token_precent: 24,
+	  token_list: 15000,
+	  token_amount: 300,
+	  token_short: 'ETH',
+	  nonce: 2
+    },
+	{
+      logo_url: Elrond_logo,
+	  logo_text: 'Elrond EGLD',
+	  logo_sale: 3938.14,
+	  token_precent: 24,
+	  token_list: 15000,
+	  token_amount: 300,
+	  token_short: 'EGLD',
+	  nonce: 3
+    },
+	]
+	const NFT_list = [
+		{
+		  logo_nft: nfx_logo1,
+		  logo_lable: 'HD Paint',
+		  nonce: 1
+		},
+		{
+		  logo_nft: nfx_logo2,
+		  logo_lable: 'United Dallas',
+		  nonce: 2
+		},
+		{
+		  logo_nft: nfx_logo3,
+		  logo_lable: 'Venice',
+		  nonce: 3
+		},
+		{
+		  logo_nft: nfx_logo4,
+		  logo_lable: 'United Dallas',
+		  nonce: 4
+		},
+		{
+		  logo_nft: nfx_logo5,
+		  logo_lable: 'Venice',
+		  nonce: 5
+		},
+		{
+		  logo_nft: nfx_logo6,
+		  logo_lable: 'HD Gold',
+		  nonce: 6
+		},
+		{
+		  logo_nft: nfx_logo7,
+		  logo_lable: 'Venice',
+		  nonce: 7
+		},
+		{
+		  logo_nft: nfx_logo8,
+		  logo_lable: 'United Dallas',
+		  nonce: 8
+		},
+		{
+		  logo_nft: nfx_logo8,
+		  logo_lable: 'HD Gold',
+		  nonce: 9
+		},
+	]
+	
+	
+    return (
+    <main className="mainContainerArea">
             <div className="main_container">
                 <div className="row">
                     <div className="contai_leftside_col">
                         <div className="contai_leftside">
                             <div className="leftSideSelect">
-                                <select name="" id="">
-                                    <option value="Alice Derived">Alice Derived</option>
-                                    <option value="Alice Derived">Alice Derived</option>
-                                    <option value="Alice Derived">Alice Derived</option>
-                                    <option value="Alice Derived">Alice Derived</option>
+                                <select name="userlist" id="userlist">
+                                    {User_list?.map((user, indexs) => (
+									<option key={indexs} value="{user.user_name}">{user.user_name}</option>
+                                    ))}
                                 </select>
                             </div>
                             <div className="sendRecBtns">
@@ -88,60 +232,26 @@ const Volletdashboard = () => {
                                 </div>
                                 <div className="tokken_boxes">
                                     <div className="row">
-                                        <div className="col-xl-4 col-lg-6 col-12 mb-3">
-                                            <div className="singleTokkenBox xpnetTokk">
-                                                <div className="tokBoxTop">
-                                                    <div className="tokken_logo">
-                                                        <Image src={xpnet_logo} fluid/>
-                                                        XPNET
-                                                    </div>
-                                                    <div className="tokBoxPri">
-                                                        <p>$0.020</p>
-                                                        <div className="tranding_persent">
-                                                           <Image src={trending_up} fluid/> 16% 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <h4>XPNET 15,000</h4>
-                                                <p>USD 300</p>
-                                            </div> 
-                                        </div> 
-                                        <div className="col-xl-4 col-lg-6 col-12 mb-3">
-                                            <div className="singleTokkenBox ethTokk">
-                                                <div className="tokBoxTop">
-                                                    <div className="tokken_logo">
-                                                        <Image src={Etherium_logo} fluid/>
-                                                        Ethereum ETH
-                                                    </div>
-                                                    <div className="tokBoxPri">
-                                                        <p>$3,938.14</p>
-                                                        <div className="tranding_persent">
-                                                           <Image src={trending_up} fluid/> 24% 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <h4>ETH 25.20368</h4>
-                                                <p>USD 9,407.68</p>
-                                            </div> 
-                                        </div> 
-                                        <div className="col-xl-4 col-lg-6 col-12 mb-3">
-                                            <div className="singleTokkenBox egldTokk">
-                                                <div className="tokBoxTop">
-                                                    <div className="tokken_logo">
-                                                        <Image src={Elrond_logo} fluid/>
-                                                        Elrond EGLD
-                                                    </div>
-                                                    <div className="tokBoxPri">
-                                                        <p>$3,938.14</p>
-                                                        <div className="tranding_persent">
-                                                           <Image src={trending_up} fluid/> 24% 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <h4>EGLD 25.20368</h4>
-                                                <p>USD 9,407</p>
-                                            </div> 
-                                        </div> 
+										{Tokens_list?.map((token_i, index_i) => (
+											<div className="col-xl-4 col-lg-6 col-12 mb-3" key={index_i}>
+												<div className="singleTokkenBox xpnetTokk">
+													<div className="tokBoxTop">
+														<div className="tokken_logo">
+															<Image src={token_i.logo_url} fluid/>
+															{token_i.logo_text}
+														</div>
+														<div className="tokBoxPri">
+															<p>${token_i.logo_sale}</p>
+															<div className="tranding_persent">
+															   <Image src={trending_up} fluid/> {token_i.token_precent}% 
+															</div>
+														</div>
+													</div>
+													<h4>{token_i.token_short} {token_i.token_list}</h4>
+													<p>USD {token_i.token_amount}</p>
+												</div> 
+											</div>
+										))}
                                     </div> 
                                 </div> 
                             </div>
@@ -155,51 +265,15 @@ const Volletdashboard = () => {
                                             </div>
                                             <div className="nfs_boxes_container">
                                                 <div className="row">
-                                                    <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6">
-                                                        <div className="singNFSBox">
-                                                            <div className="nfs_image"><Image src={nfx_logo1} fluid/>HD Paint</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6">
-                                                        <div className="singNFSBox">
-                                                            <div className="nfs_image"><Image src={nfx_logo2} fluid/>United Dallas</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6">
-                                                        <div className="singNFSBox">
-                                                            <div className="nfs_image"><Image src={nfx_logo3} fluid/>Venice</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6">
-                                                        <div className="singNFSBox">
-                                                            <div className="nfs_image"><Image src={nfx_logo4} fluid/>United Dallas</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6">
-                                                        <div className="singNFSBox">
-                                                            <div className="nfs_image"><Image src={nfx_logo5} fluid/>Venice</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6">
-                                                        <div className="singNFSBox">
-                                                            <div className="nfs_image"><Image src={nfx_logo6} fluid/>HD Gold</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6">
-                                                        <div className="singNFSBox">
-                                                            <div className="nfs_image"><Image src={nfx_logo7} fluid/>United Dallas</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6">
-                                                        <div className="singNFSBox">
-                                                            <div className="nfs_image"><Image src={nfx_logo8} fluid/>Venice</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6">
-                                                        <div className="singNFSBox">
-                                                            <div className="nfs_image"><Image src={nfx_logo9} fluid/>HD Gold</div>
-                                                        </div>
-                                                    </div>
+                                                    
+													{NFT_list?.map((ntfs_i, index_nt) => (
+														<div className="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6">
+															<div className="singNFSBox">
+																<div className="nfs_image"><Image src={ntfs_i.logo_nft} fluid/>{ntfs_i.logo_lable}</div>
+															</div>
+														</div>
+                                                    ))}
+																										
                                                 </div>
                                             </div>
                                         </div>
@@ -213,80 +287,25 @@ const Volletdashboard = () => {
                                                     <Link to="#" className="view_all">View all 32 <Image src={viewAll} fluid/></Link>
                                                 </div>
                                             </div>
-                                            <div class="trans_boxes_container">
-                                                <div class="trans_table_box">
-                                                    <table class="transTable table">
+                                            <div className="trans_boxes_container">
+                                                <div className="trans_table_box">
+                                                    <table className="transTable table">
                                                         <tbody>
-                                                            <tr>
-                                                                <td><span class="sendCol"><Image src={traSend} fluid/></span></td>
-                                                                <td class="tokkenCol">
-                                                                    <p class="tranSenRecdId">Sent to sdfghjk56789dfghjk456789
-                                                                        <span class="copy_tra_id"><Image src={copytra} fluid/></span>
+														{Transactions_list?.map((item, index) => (
+														<tr key={index}>
+                                                                <td><span className="sendCol"><Image src={item.sent_img} fluid/></span></td>
+                                                                <td className="tokkenCol">
+														<p className="tranSenRecdId">Sent to {item.sent_to_txt}
+                                                                        <span className="copy_tra_id"><Image src={copytra} fluid/></span>
                                                                     </p>
-                                                                    <span class="tranDate">September 1st 2021, at 3:30 PM</span>
+                                                                    <span className="tranDate">{item.date}</span>
                                                                 </td>
-                                                                <td class="tranTokenNam">ETH 25.20368</td>
+                                                                <td className="tranTokenNam">{item.tranaction_type} 25.20368</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td><span class="sendCol"><Image src={traRec} fluid/></span></td>
-                                                                <td class="tokkenCol">
-                                                                    <p class="tranSenRecdId">Recieved from sdfghjk56789dfghjk
-                                                                        <span class="copy_tra_id"><Image src={copytra} fluid/></span>
-                                                                    </p>
-                                                                    <span class="tranDate">September 1st 2021, at 3:30 PM</span>
-                                                                </td>
-                                                                <td class="tranTokenNam">ETH 25.20368</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span class="sendCol"><Image src={traRec} fluid/></span></td>
-                                                                <td class="tokkenCol">
-                                                                    <p class="tranSenRecdId">Recieved from sdfghjk56789dfghjk
-                                                                        <span class="copy_tra_id"><Image src={copytra} fluid/></span>
-                                                                    </p>
-                                                                    <span class="tranDate">September 1st 2021, at 3:30 PM</span>
-                                                                </td>
-                                                                <td class="tranTokenNam">ETH 25.20368</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span class="sendCol"><Image src={traRec} fluid/></span></td>
-                                                                <td class="tokkenCol">
-                                                                    <p class="tranSenRecdId">Recieved from sdfghjk56789dfghjk
-                                                                        <span class="copy_tra_id"><Image src={copytra} fluid/></span>
-                                                                    </p>
-                                                                    <span class="tranDate">September 1st 2021, at 3:30 PM</span>
-                                                                </td>
-                                                                <td class="tranTokenNam">ETH 25.20368</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span class="sendCol"><Image src={traSend} fluid/></span></td>
-                                                                <td class="tokkenCol">
-                                                                    <p class="tranSenRecdId">Sent to sdfghjk56789dfghjk456789
-                                                                        <span class="copy_tra_id"><Image src={copytra} fluid/></span>
-                                                                    </p>
-                                                                    <span class="tranDate">September 1st 2021, at 3:30 PM</span>
-                                                                </td>
-                                                                <td class="tranTokenNam">ETH 25.20368</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span class="sendCol"><Image src={traSend} fluid/></span></td>
-                                                                <td class="tokkenCol">
-                                                                    <p class="tranSenRecdId">Sent to sdfghjk56789dfghjk456789
-                                                                        <span class="copy_tra_id"><Image src={copytra} fluid/></span>
-                                                                    </p>
-                                                                    <span class="tranDate">September 1st 2021, at 3:30 PM</span>
-                                                                </td>
-                                                                <td class="tranTokenNam"><span class="nfts_logo"><Image src={traNfs} fluid/></span>HD Paint</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span class="sendCol"><Image src={traRec} fluid/></span></td>
-                                                                <td class="tokkenCol">
-                                                                    <p class="tranSenRecdId">Recieved from sdfghjk56789dfghjk
-                                                                        <span class="copy_tra_id"><Image src={copytra} fluid/></span>
-                                                                    </p>
-                                                                    <span class="tranDate">September 1st 2021, at 3:30 PM</span>
-                                                                </td>
-                                                                <td class="tranTokenNam">ETH 25.20368</td>
-                                                            </tr>
+														))}
+                                                            
+															
+                                                            
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -300,6 +319,6 @@ const Volletdashboard = () => {
                 </div>
             </div>
         </main>
-	);
+    );
 };
 export default Volletdashboard;
