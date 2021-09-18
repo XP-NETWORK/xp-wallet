@@ -234,7 +234,7 @@ const Volletdashboard = () => {
                                 <div className="tokken_boxes">
                                     <div className="row">
 										{Tokens_list?.map((token_i, index_i) => (
-											<div className="col-xl-4 col-lg-6 col-12 mb-3" key={index_i}>
+											<div className="col-xl-4 col-lg-6 col-md-12 col-sm-6 col-12 mb-3" key={index_i}>
 												<div className="singleTokkenBox xpnetTokk">
 													<div className="tokBoxTop">
 														<div className="tokken_logo">
@@ -268,7 +268,7 @@ const Volletdashboard = () => {
                                                 <div className="row">
                                                     
 													{NFT_list?.map((ntfs_i, index_nt) => (
-														<div className="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-6">
+														<div className="col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6">
 															<div className="singNFSBox">
 																<div className="nfs_image"><Image src={ntfs_i.logo_nft} fluid/>{ntfs_i.logo_lable}</div>
 															</div>

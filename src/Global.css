@@ -260,7 +260,7 @@ span.menu_btn {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-	 min-width: 245px;
+    min-width: 245px;
 }
 
 .leftSideSelect select {
@@ -392,7 +392,6 @@ ul.sideMenuList li {
 
 .main_conent_col {
     flex-grow: 1;
-    width: 80%;
 }
 
 .tokkenid_list {
@@ -608,6 +607,7 @@ ul.sideMenuList li {
     display: flex;
     align-items: center;
     margin-bottom: 17px;
+    flex-wrap: wrap;
 }
 
 .transa_filter {
@@ -628,6 +628,7 @@ ul.sideMenuList li {
     padding: 16px 0;
     border-radius: 16px;
     background: #fff;
+    overflow: auto;
 }
 
 .trans_table_box table.table {
@@ -687,8 +688,10 @@ span.nfts_logo {
     color: #000;
     line-height: 16px;
     position: relative;
-    padding-right: 30px;
     display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tranDate {
@@ -750,4 +753,68 @@ span.nfts_logo {
 
 .sideMenuList li.dash_menu_item a .comiSoonL {
     margin-left: auto;
+}
+
+@media (max-width: 991px) {
+
+    .navTabs {
+        order: 3;
+        margin: 10px 0 5px 0;
+    }
+
+    .navRight {
+        width: 33%;
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+
+    .tokken_id {
+        width: 70%;
+    }
+
+    .main_conent_col {
+        width: calc(100vw - 265px);
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .contai_leftside_col {
+        display: none;
+    }
+
+    .main_conent_col {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .navRight {
+        width: auto;
+    }
+
+    .navContainer .navbar-brand {
+        margin-right: 0;
+        width: 63%;
+    }
+
+    .navTabs a.navTab {
+        flex-direction: column;
+        line-height: 1.3;
+        padding: 5px 10px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navTabs {
+        width: 100%;
+        justify-content: center;
+    }
+
 }
