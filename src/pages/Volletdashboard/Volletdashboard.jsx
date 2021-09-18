@@ -206,9 +206,9 @@ const Volletdashboard = () => {
                             <div className="sidebarMenuList">
                                 <p>Staking</p>
                                 <ul className="sideMenuList">
-                                    <li className="dash_menu_item"><Link to="#"><Image src={Stake} fluid/> Stake <span className="comiSoonL">Coming Soon</span></Link></li>
-                                    <li className="dash_menu_item"><Link to="#"><Image src={Delegate} fluid/> Delegate <span className="comiSoonL">Coming Soon</span></Link></li>
-                                    <li className="dash_menu_item"><Link to="#"><Image src={Validate} fluid/> Validate <span className="comiSoonL">Coming Soon</span></Link></li>
+                                    <li className="dash_menu_item" id="stake_side_menu"><Link to="#"><Image src={Stake} fluid/> Stake <span className="comiSoonL">Coming Soon</span></Link></li>
+                                    <li className="dash_menu_item" id="delegate_menu_side"><Link to="#"><Image src={Delegate} fluid/> Delegate <span className="comiSoonL">Coming Soon</span></Link></li>
+                                    <li className="dash_menu_item" id="validate_menu_side"><Link to="#"><Image src={Validate} fluid/> Validate <span className="comiSoonL">Coming Soon</span></Link></li>
                                 </ul>
                             </div>
                             <div className="xp_netWork21">

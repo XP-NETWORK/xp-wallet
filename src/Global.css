@@ -818,3 +818,18 @@ span.nfts_logo {
     }
 
 }
+#navTab_2{
+pointer-events:none;
+}
+#navTab_3{
+pointer-events:none;
+}
+#stake_side_menu{
+pointer-events:none;
+}
+#delegate_menu_side{
+pointer-events:none;
+}
+#validate_menu_side{
+pointer-events:none;
+}
