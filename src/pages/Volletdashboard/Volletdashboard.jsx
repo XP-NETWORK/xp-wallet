@@ -1,6 +1,9 @@
-import React, {useState} from 'react';
+import React, { useRef, useState } from 'react';
+
 import {Link} from 'react-router-dom';
+
 import {Container, Row, Col, Image, Form} from "react-bootstrap";
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 import SendIcon from "../../assets/img/send.svg";
 import ReciveIcon from "../../assets/img/send.svg";
 import Dashboard from "../../assets/img/menu_icons/dashboard.svg";
@@ -175,7 +178,17 @@ const Volletdashboard = () => {
 		  nonce: 9
 		},
 	]
-	
+	const [copySuccess, setCopySuccess] = useState('');
+  const textAreaRef = useRef(null);
+
+  function copyToClipboard(ee) {
+    textAreaRef.current.select();
+    document.execCommand('copy');
+    // This is just personal preference.
+    // I prefer to not show the whole text area selected.
+    ee.target.focus();
+    setCopySuccess('Copied!');
+  };
 	
     return (
     <main className="mainContainerArea">
@@ -206,9 +219,9 @@ const Volletdashboard = () => {
                             <div className="sidebarMenuList">
                                 <p>Staking</p>
                                 <ul className="sideMenuList">
-                                    <li className="dash_menu_item" id="stake_side_menu"><Link to="#"><Image src={Stake} fluid/> Stake <span className="comiSoonL">Coming Soon</span></Link></li>
-                                    <li className="dash_menu_item" id="delegate_menu_side"><Link to="#"><Image src={Delegate} fluid/> Delegate <span className="comiSoonL">Coming Soon</span></Link></li>
-                                    <li className="dash_menu_item" id="validate_menu_side"><Link to="#"><Image src={Validate} fluid/> Validate <span className="comiSoonL">Coming Soon</span></Link></li>
+                                    <li className="dash_menu_item"><Link to="#"><Image src={Stake} fluid/> Stake <span className="comiSoonL">Coming Soon</span></Link></li>
+                                    <li className="dash_menu_item"><Link to="#"><Image src={Delegate} fluid/> Delegate <span className="comiSoonL">Coming Soon</span></Link></li>
+                                    <li className="dash_menu_item"><Link to="#"><Image src={Validate} fluid/> Validate <span className="comiSoonL">Coming Soon</span></Link></li>
                                 </ul>
                             </div>
                             <div className="xp_netWork21">
@@ -219,10 +232,24 @@ const Volletdashboard = () => {
                     <div className="main_conent_col">
                         <div className="main_conent">
                             <div className="tokkenid_list">
-                                <span className="copyAlert">Token ID- Copied</span>
-                                <p className="tokken_id" id="tokkenId">5ENeQkvLvFCg3KjHru6NAwN6esvbUxiS7CP2YicZYjQ4epBb</p>
+								
+									<span className="copyAlert">Token ID- Copied</span>
+								<p className="tokken_id" id="tokkenId"><textarea
+          ref={textAreaRef}
+          value='5ENeQkvLvFCg3KjHru6NAwN6esvbUxiS7CP2YicZYjQ4epBb'
+        />5ENeQkvLvFCg3KjHru6NAwN6esvbUxiS7CP2YicZYjQ4epBb</p>
                                 <div className="tokken_icons">
-                                    <Link to="#" className="copy_tokken"><Image src={TokkenCopy} fluid/></Link>
+									{
+									   /* Logical shortcut for only displaying the 
+										  button if the copy command exists */
+									   document.queryCommandSupported('copy') &&
+										<div>
+										 
+										  <Link to="#" className="copy_tokken" onClick={copyToClipboard}><Image src={TokkenCopy} fluid/></Link>
+										  {copySuccess}
+										</div>
+									  }
+                                    
                                     <Link to="#" className="scan_tokken"><Image src={TokkenScan} fluid/></Link>
                                 </div>
                             </div>

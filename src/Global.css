@@ -833,3 +833,6 @@ pointer-events:none;
 #validate_menu_side{
 pointer-events:none;
 }
+p#tokkenId textarea {
+    display: none;
+}
