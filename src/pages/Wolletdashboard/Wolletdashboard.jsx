@@ -1,9 +1,12 @@
 import React, { useRef, useState } from 'react';
-
 import {Link} from 'react-router-dom';
-
 import {Container, Row, Col, Image, Form} from "react-bootstrap";
-import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { Dimensions, Images, View, ViewStyle } from 'react-native';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import QRCode from 'qrcode.react';
+
+//import {qrCode} from '../../utils/qr.ts';
+
 import SendIcon from "../../assets/img/send.svg";
 import ReciveIcon from "../../assets/img/send.svg";
 import Dashboard from "../../assets/img/menu_icons/dashboard.svg";
@@ -189,7 +192,20 @@ const Volletdashboard = () => {
     ee.target.focus();
     setCopySuccess('Copied!');
   };
-	
+    
+  const downloadQRCode = () => {
+    const qrCodeURL = document.getElementById('qrCodeEl')
+      .toDataURL("image/png")
+      .replace("image/png", "image/octet-stream");
+    console.log(qrCodeURL)
+    let aEl = document.createElement("a");
+    aEl.href = qrCodeURL;
+    aEl.download = "QR_Code.png";
+    document.body.appendChild(aEl);
+    aEl.click();
+    document.body.removeChild(aEl);
+  }
+  
     return (
     <main className="mainContainerArea">
             <div className="main_container">
@@ -234,10 +250,9 @@ const Volletdashboard = () => {
                             <div className="tokkenid_list">
 								
 									<span className="copyAlert">Token ID- Copied</span>
-								<p className="tokken_id" id="tokkenId"><textarea
-          ref={textAreaRef}
-          value='5ENeQkvLvFCg3KjHru6NAwN6esvbUxiS7CP2YicZYjQ4epBb'
-        />5ENeQkvLvFCg3KjHru6NAwN6esvbUxiS7CP2YicZYjQ4epBb</p>
+								<p className="tokken_id" id="tokkenId">
+								<textarea ref={textAreaRef} value='5ENeQkvLvFCg3KjHru6NAwN6esvbUxiS7CP2YicZYjQ4epBb'/>
+								5ENeQkvLvFCg3KjHru6NAwN6esvbUxiS7CP2YicZYjQ4epBb</p>
                                 <div className="tokken_icons">
 									{
 									   /* Logical shortcut for only displaying the 
@@ -249,8 +264,14 @@ const Volletdashboard = () => {
 										  {copySuccess}
 										</div>
 									  }
+            <Link to="#" className="scan_tokken download-btn" onClick={downloadQRCode}><Image src={TokkenScan} fluid/></Link>
                                     
-                                    <Link to="#" className="scan_tokken"><Image src={TokkenScan} fluid/></Link>
+      <QRCode
+        id="qrCodeEl"
+        size={150}
+        value="5ENeQkvLvFCg3KjHru6NAwN6esvbUxiS7CP2YicZYjQ4epBb"
+      />
+                                    
                                 </div>
                             </div>
                             <div className="tokken_list_box">

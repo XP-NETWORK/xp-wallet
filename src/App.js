@@ -7,7 +7,7 @@ import {
 import NavBar from "./layout/NavBar";
 import './Global.css';
 import './responsive.css';
-import Volletdashboard from "./pages/Volletdashboard/Volletdashboard";
+import Wolletdashboard from "./pages/Wolletdashboard/Wolletdashboard";
 
 
 
@@ -19,7 +19,7 @@ function App() {
                 <NavBar/>
             </header>
             <Switch>
-                <Route exact path={"/"} component={Volletdashboard}/>
+                <Route exact path={"/"} component={Wolletdashboard}/>
                 
             </Switch>
         </Router>

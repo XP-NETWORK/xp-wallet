@@ -836,3 +836,6 @@ pointer-events:none;
 p#tokkenId textarea {
     display: none;
 }
+#qrCodeEl {
+    display: none;
+}
